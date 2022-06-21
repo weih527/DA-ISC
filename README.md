@@ -1,6 +1,6 @@
 # Domain Adaptive Mitochondria Segmentation via Enforcing Inter-Section Consistency
 
-**Accepted by MICCAI-2020**
+**Accepted by MICCAI-2022**
 
 Wei Huang, Xiaoyu Liu, Zhen Cheng, Yueyi Zhang, and Zhiwei Xiong(*)
 
