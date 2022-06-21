@@ -32,7 +32,7 @@ docker pull renwu527/auto-emseg:v5.4
 ## Datasets
 Pending
 
-## Train
+## Training
 Pending
 
 ## Test
