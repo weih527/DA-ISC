@@ -50,6 +50,7 @@ The entire installed python packages can be found in 'requirements.txt'
 | Test set     | -                  | 165x768x1024 | 100x4096x4096 |      | 100x4096x4096 |
 
 ### Data Tree
+```python
 |--./data
 |   |--Lucchi
 |   |   |--testing
@@ -58,18 +59,19 @@ The entire installed python packages can be found in 'requirements.txt'
 |   |   |--training_groundtruth
 |   |--Mito
 |   |   |--human
-|   |   |   |--testing
-|   |   |   |--testing_groundtruth
-|   |   |   |--training
-|   |   |   |--training_groundtruth
+|   |   |   |--testing.hdf
+|   |   |   |--testing_groundtruth.hdf
+|   |   |   |--training.hdf
+|   |   |   |--training_groundtruth.hdf
 |   |   |--rat
-|   |   |   |--testing
-|   |   |   |--testing_groundtruth
-|   |   |   |--training
-|   |   |   |--training_groundtruth
+|   |   |   |--testing.hdf
+|   |   |   |--testing_groundtruth.hdf
+|   |   |   |--training.hdf
+|   |   |   |--training_groundtruth.hdf
 |   |--VNC3
 |   |   |--training
 |   |   |--training_groundtruth
+```
 
 **We store datasets at  [BaiduYun](https://pan.baidu.com/s/15BS0Sa_LPuyKxNJaAob4Eg) (Access code: weih)**
 
