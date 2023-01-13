@@ -1,0 +1,63 @@
+NAME: 'mito_r2h_lre4_wadv001'
+
+MODEL:
+    input_nc: 1
+    output_nc: 2
+    num_classes: 2
+    input_channels: 64
+    level: 1
+
+TRAIN:
+    resume: False
+    model_name: ''
+    if_valid: True
+    cache_path: '../caches/'
+    save_path: '../models/'
+    loss_func: 'WeightedMSELoss'   # 'WeightedBCELoss', 'BCELoss'
+    if_adv_weight: False
+    cross_loss_source: False
+    cross_loss_target: True
+    weight_cross: 0.1
+    consistency_weight_rampup: False
+
+    opt_type: 'adam'  # sgd
+    lr_mode: 'fixed'
+    total_iters: 200000
+    rampup_iters: 50000
+    learning_rate: 0.0001
+    learning_rate_ms: 0.0001
+    learning_rate_mt: 0.0001
+    display_freq: 100
+    show_freq: 500
+    valid_freq: 500
+    save_freq: 500
+    power: 0.9
+    weight_adv_temporal: 0.01
+    weight_adv_spatial: 0.01
+    lamda_wd: 0.001
+
+    batch_size: 1
+    num_workers: 4
+    if_cuda: True
+
+    random_seed: 555  # -1 is none
+
+DATA:
+    data_dir_img: '../data/Mito/rat/training.hdf'
+    data_dir_label: '../data/Mito/rat/training_groundtruth.hdf'
+    data_list: ~
+    input_size: 512
+    source_stride: 1
+    data_dir_target: '../data/Mito/human/training.hdf'
+    data_dir_target_label: '../data/Mito/human/training_groundtruth.hdf'
+    data_list_target: ~
+    input_size_target: 512
+    target_stride: 1
+    data_dir_val: '../data/Mito/human/testing.hdf'
+    data_dir_val_label: '../data/Mito/human/testing_groundtruth.hdf'
+    data_list_val: ~
+    input_size_test: 1024
+
+TEST:
+    pad: 0
+    model_name: ''
