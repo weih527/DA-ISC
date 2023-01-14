@@ -144,7 +144,7 @@ Done
 ```
 
 ### MitoEM-R --> MitoEM-H
-**It needs large memory for quantitative measurement (>50GB)**
+**It needs large memory for quantitative measurement (>100GB)**
 
 ```python
 cd scripts
@@ -164,10 +164,11 @@ the number of sub-volume: 6336
 Prediction time (s): 1438.0159723758698
 Measure on mAP, F1, MCC, and IoU...
 mAP=0.9255, F1=0.8556, MCC=0.8493, IoU=0.7477
+Done
 ```
 
 ### MitoEM-H --> MitoEM-R
-**It needs large memory for quantitative measurement (>50GB)**
+**It needs large memory for quantitative measurement (>100GB)**
 
 ```python
 cd scripts
@@ -175,7 +176,19 @@ python inference_mito.py -c mitoh2r -mn mitoh2r -sw
 ```
 Print
 ```python
+cfg_file: mitoh2r.yaml
+out_path: ../inference/mitoh2r
+Load ../data/Mito/rat/testing.hdf
+raw shape: (100, 4096, 4096)
+padded raw shape: (100, 4608, 4608)
+iters: 6336
+Load ../data/Mito/rat/testing_groundtruth.hdf
+Begin inference...
+the number of sub-volume: 6336
+Prediction time (s): 1441.9779460430145
+Measure on mAP, F1, MCC, and IoU...
 mAP=0.9682, F1=0.8851, MCC=0.8829, IoU=0.7941
+Done
 ```
 
 ## Visual Results
