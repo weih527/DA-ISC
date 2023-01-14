@@ -33,6 +33,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--cfg', type=str, default='vnc2lucchi1', help='config file')
     parser.add_argument('-mn', '--model_name', type=str, default='vnc2lucchi1')
+    parser.add_argument('-mm', '--mode_map', type=str, default='map')
     parser.add_argument('-sw', '--show', action='store_true', default=False)
     args = parser.parse_args()
     
@@ -100,22 +101,23 @@ if __name__ == '__main__':
         print('Show...')
         show_test(preds_int, target_evaluation.get_gt(), cfg.DATA.data_dir_val, seg_img_path)
 
-    # # dice and jac
-    # print('Measure on Dice and JAC...')
-    # mean_dice, mean_jac = target_evaluation(preds_int, mode='dice')
-    # print('dice=%.6f, jac=%.6f' % (mean_dice, mean_jac))
-    # f_valid_txt.write('dice=%.6f, jac=%.6f' % (mean_dice, mean_jac))
-    # f_valid_txt.write('\n')
-
-    # mAP, F1, MCC, and IoU
-    print('Measure on mAP, F1, MCC, and IoU...')
-    t3 = time.time()
-    mAP, F1, MCC, IoU = target_evaluation(preds, mode='map')
-    t4 = time.time()
-    print('mAP=%.4f, F1=%.4f, MCC=%.4f, IoU=%.4f' % (mAP, F1, MCC, IoU))
-    print('Measurement time (s):', (t4 - t3))
-    f_valid_txt.write('mAP=%.4f, F1=%.4f, MCC=%.4f, IoU=%.4f' % (mAP, F1, MCC, IoU))
-    f_valid_txt.write('\n')
+    if args.mode_map == 'map':
+        # mAP, F1, MCC, and IoU
+        print('Measure on mAP, F1, MCC, and IoU...')
+        t3 = time.time()
+        mAP, F1, MCC, IoU = target_evaluation(preds, mode='map')
+        t4 = time.time()
+        print('mAP=%.4f, F1=%.4f, MCC=%.4f, IoU=%.4f' % (mAP, F1, MCC, IoU))
+        print('Measurement time (s):', (t4 - t3))
+        f_valid_txt.write('mAP=%.4f, F1=%.4f, MCC=%.4f, IoU=%.4f' % (mAP, F1, MCC, IoU))
+        f_valid_txt.write('\n')
+    else:
+        # dice and jac
+        print('Measure on Dice and JAC...')
+        mean_dice, mean_jac = target_evaluation(preds_int, mode='dice')
+        print('dice=%.6f, jac=%.6f' % (mean_dice, mean_jac))
+        f_valid_txt.write('dice=%.6f, jac=%.6f' % (mean_dice, mean_jac))
+        f_valid_txt.write('\n')
     f_valid_txt.close()
 
     print('Done')
