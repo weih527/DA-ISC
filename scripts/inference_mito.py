@@ -34,7 +34,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--cfg', type=str, default='mitor2h', help='config file')
     parser.add_argument('-mn', '--model_name', type=str, default='mitor2h')
-    parser.add_argument('-mm', '--mode_map', type=str, default='map_3d')
+    parser.add_argument('-mm', '--mode_map', type=str, default='map_2d')
     parser.add_argument('-sw', '--show', action='store_true', default=False)
     args = parser.parse_args()
     
