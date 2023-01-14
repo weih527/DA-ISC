@@ -51,7 +51,7 @@ The entire installed python packages can be found in 'requirements.txt'
 |Test set|None|165x768x1024|100x4096x4096|100x4096x4096|
 |Website|[GitHub](https://github.com/unidesigner/groundtruth-drosophila-vnc)|[EPFL](https://www.epfl.ch/labs/cvlab/data/data-em/)|[MitoEM](https://mitoem.grand-challenge.org/)|[MitoEM](https://mitoem.grand-challenge.org/)|
 
-**You can download our processed data directly from  [GoogleDrive](https://drive.google.com/drive/folders/15oFhlWoBACOpyEUDx2-wbnUj3aIwYydv?usp=sharing) or  [BaiduYun](https://pan.baidu.com/s/15BS0Sa_LPuyKxNJaAob4Eg) (Access code: weih). However, because the MitoEM dataset is too large (>10GB), we cannot put it on our network disk. It is recommended to download it from the official website.**
+**You can download our processed data directly from  [GoogleDrive](https://drive.google.com/drive/folders/15oFhlWoBACOpyEUDx2-wbnUj3aIwYydv?usp=sharing) or  [BaiduYun](https://pan.baidu.com/s/15BS0Sa_LPuyKxNJaAob4Eg) (Access code: weih). However, because the MitoEM dataset is too large (>10GB), we cannot put it in our cloud storage. It is recommended to download it from the official website.**
 
 ### Data Tree
 ```python
@@ -108,7 +108,7 @@ python main_mito.py -c mitoh2r
 ## Inference
 We test our trained model on one NVIDIA Tianxp GPU.
 
-**We store our trained models at [GoogleDrive](https://drive.google.com/drive/folders/1OiL9-qcfsdncVJhvg0ELmTPqhQhneUmT?usp=sharing) and [BaiduYun](https://pan.baidu.com/s/1Jg8XVzcTvhrGnOXXMM4Alg) (Access code: weih)**
+**We store our trained models at [GoogleDrive](https://drive.google.com/drive/folders/1OiL9-qcfsdncVJhvg0ELmTPqhQhneUmT?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1Jg8XVzcTvhrGnOXXMM4Alg) (Access code: weih)**
 
 ### VNC III --> Lucchi (Subset1)
 ```python
@@ -177,6 +177,9 @@ Print
 ```python
 mAP=0.9682, F1=0.8851, MCC=0.8829, IoU=0.7941
 ```
+
+## Visual Results
+![visual_results](./images/visual_results.png)
 
 ## Contact
 If you have any problem with the released code, please do not hesitate to contact me by email (weih527@mail.ustc.edu.cn).
