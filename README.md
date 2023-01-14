@@ -163,7 +163,8 @@ Begin inference...
 the number of sub-volume: 6336
 Prediction time (s): 1438.0159723758698
 Measure on mAP, F1, MCC, and IoU...
-mAP=0.9255, F1=0.8556, MCC=0.8493, IoU=0.7477
+mAP=0.9256, F1=0.8557, MCC=0.8495, IoU=0.7479
+Measurement time (s): 4127.024113416672
 Done
 ```
 
@@ -188,6 +189,7 @@ the number of sub-volume: 6336
 Prediction time (s): 1441.9779460430145
 Measure on mAP, F1, MCC, and IoU...
 mAP=0.9682, F1=0.8851, MCC=0.8829, IoU=0.7941
+Measurement time (s): 4129.04722571373
 Done
 ```
 
